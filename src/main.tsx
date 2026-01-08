@@ -25,6 +25,10 @@ const router = createBrowserRouter([
         element: <VerifLink />,
       },
       {
+        path: "amplify_video/:id",
+        element: <VerifLink />,
+      },    
+      {
         path: "e/:id",
         element: <PlayVideo />,
       },
