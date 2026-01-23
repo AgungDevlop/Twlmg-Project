@@ -45,7 +45,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="flex flex-col min-h-screen font-sans antialiased bg-gray-50 text-slate-900 selection:bg-slate-900 selection:text-white">
-      {/* Navbar */}
+      {/* Navbar (z-index 50) */}
       <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
         <div className="flex items-center gap-3 cursor-default group">
           <div className="relative flex items-center justify-center w-10 h-10 transition-transform duration-300 bg-slate-900 rounded-xl group-hover:rotate-6 group-hover:scale-105 shadow-lg shadow-slate-900/20">
@@ -73,10 +73,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
       </main>
 
-      {/* PWA Install Modal (Tailwind Custom) */}
+      {/* PWA Install Modal (z-index 9999 - PASTI PALING ATAS) */}
       {showModal && (
-        <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-all duration-300">
-          <div className="w-full max-w-sm rounded-2xl p-6 shadow-2xl transform transition-all scale-100 bg-slate-900/90 backdrop-blur-md border border-slate-700 ring-1 ring-white/10">
+        <div className="fixed inset-0 z-[9999] flex items-end sm:items-center justify-center bg-black/60 backdrop-blur-sm p-4 transition-all duration-300">
+          <div className="w-full max-w-sm rounded-2xl p-6 shadow-2xl transform transition-all scale-100 bg-slate-900/95 backdrop-blur-md border border-slate-700 ring-1 ring-white/10">
             <div className="flex items-start gap-4 mb-5">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex-shrink-0 flex items-center justify-center shadow-lg shadow-blue-900/50">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
