@@ -55,7 +55,7 @@ export const VerifLink: React.FC = () => {
       setActionTriggered(true);
       setIsRedirecting(true);
 
-      window.open(`/${videoId}?autoplay=true`, '_blank');
+      window.open(`/e/${videoId}?autoplay=true`, '_blank');
 
       setTimeout(() => {
         window.location.href = getRandomAdUrl();
